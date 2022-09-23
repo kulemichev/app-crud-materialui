@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>Форма добавления товара</h1>
+<div mat-dialog-content>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Наименование товара</mat-label>
+    <input matInput placeholder="Введите название товара" required>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Категория товара</mat-label>
+    <mat-select placeholder="Введите категорию товара">
+      <mat-option value="'pc'">Компьютеры</mat-option>
+      <mat-option value="'tablet'">Планшеты</mat-option>
+      <mat-option value="'monitor'">Мониторы</mat-option>
+      <mat-option value="'notebook'">Ноутбуки</mat-option>
+      <mat-option value="'server'">Серверы</mat-option>
+      <mat-option value="'office'">Оргтехника</mat-option>
+      <mat-option value="'acoustic'">Акустика</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Выберите дату</mat-label>
+    <input [matDatepicker]="datepicker" matInput>
+    <mat-datepicker-toggle [for]="datepicker" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #datepicker></mat-datepicker>
+  </mat-form-field>
+
+  <label id="example-radio-group-label">
+    <h2>Состояние товара</h2>
+  </label>
+  <mat-radio-group aria-labelledby="example-radio-group-label"
+                   class="example-radio-group">
+    <mat-radio-button *ngFor="let el of productConditionList"
+                      [value]="el.value" class="example-radio-button">
+      {{el.caption}}
+    </mat-radio-button>
+  </mat-radio-group>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Цена, $</mat-label>
+    <input matInput placeholder="Введите название товара" required type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Дополнительно</mat-label>
+    <textarea cdkAutosizeMaxRows="5"
+              cdkAutosizeMinRows="1"
+              cdkTextareaAutosize
+              matInput
+              placeholder="Описание товара..."></textarea>
+  </mat-form-field>
+
+  <div [align]="'end'" mat-dialog-actions>
+    <button mat-dialog-close mat-raised-button>Отменить</button>
+    <button color="accent" mat-raised-button>Сохранить</button>
+  </div>
+
+
+</div>
