@@ -1,0 +1,47 @@
+{
+  "productList": [
+    {
+      "name": "Ноутбук какой-то",
+      "category": "notebook",
+      "productCondition": "new",
+      "price": "1456",
+      "comment": "Это стильный иговой ноут",
+      "date": "2022-09-24T09:19:10.267Z",
+      "id": "1"
+    },
+    {
+      "name": "Монитор Samsung",
+      "category": "monitor",
+      "productCondition": "new",
+      "price": 765,
+      "comment": "Монитор с разрешением 1920*1080",
+      "date": "2022-09-21T21:00:00.000Z",
+      "id": "YLFCL6I"
+    },
+    {
+      "name": "Монитор Sumsung",
+      "category": "monitor",
+      "productCondition": "new",
+      "price": 765,
+      "comment": "Монитор с разрешением 1920*1080",
+      "date": "2022-09-21T21:00:00.000Z",
+      "id": "c2JNfHJ"
+    },
+    {
+      "name": "Samsung Galaxy Tab2",
+      "category": "tablet",
+      "productCondition": "new",
+      "price": 299,
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi corporis deserunt ea earum illo molestiae omnis pariatur reprehenderit voluptatum.",
+      "date": "2022-09-05T21:00:00.000Z",
+      "id": "WSmnopk"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

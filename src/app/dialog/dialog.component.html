@@ -1,6 +1,8 @@
 <h1 mat-dialog-title>Форма добавления товара</h1>
+
 <div mat-dialog-content>
   <form [formGroup]="form">
+
     <mat-form-field appearance="outline">
       <mat-label>Наименование товара</mat-label>
       <input formControlName="name" matInput placeholder="Введите название товара" required>
@@ -9,13 +11,13 @@
     <mat-form-field appearance="outline">
       <mat-label>Категория товара</mat-label>
       <mat-select formControlName="category" placeholder="Введите категорию товара">
-        <mat-option value="'pc'">Компьютеры</mat-option>
-        <mat-option value="'tablet'">Планшеты</mat-option>
-        <mat-option value="'monitor'">Мониторы</mat-option>
-        <mat-option value="'notebook'">Ноутбуки</mat-option>
-        <mat-option value="'server'">Серверы</mat-option>
-        <mat-option value="'office'">Оргтехника</mat-option>
-        <mat-option value="'acoustic'">Акустика</mat-option>
+        <mat-option [value]="'Компьютеры'">Компьютеры</mat-option>
+        <mat-option [value]="'Планшеты'">Планшеты</mat-option>
+        <mat-option [value]="'Мониторы'">Мониторы</mat-option>
+        <mat-option [value]="'Ноутбуки'">Ноутбуки</mat-option>
+        <mat-option [value]="'Серверы'">Серверы</mat-option>
+        <mat-option [value]="'Оргтехника'">Оргтехника</mat-option>
+        <mat-option [value]="'Акустика'">Акустика</mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -34,8 +36,8 @@
                      class="example-radio-group"
                      formControlName="productCondition">
       <mat-radio-button *ngFor="let el of productConditionList"
-                        [value]="el.value" class="example-radio-button">
-        {{el.caption}}
+                        [value]="el" class="example-radio-button">
+        {{el}}
       </mat-radio-button>
     </mat-radio-group>
 
