@@ -3,38 +3,92 @@
     {
       "name": "Ноутбук какой-то",
       "category": "notebook",
-      "productCondition": "new",
+      "productCondition": "Новый",
       "price": "1456",
       "comment": "Это стильный иговой ноут",
       "date": "2022-09-24T09:19:10.267Z",
-      "id": "1"
+      "id": 1
     },
     {
-      "name": "Монитор Samsung",
-      "category": "monitor",
-      "productCondition": "new",
-      "price": 765,
-      "comment": "Монитор с разрешением 1920*1080",
-      "date": "2022-09-21T21:00:00.000Z",
-      "id": "YLFCL6I"
+      "name": "ACCER",
+      "category": "Ноутбуки",
+      "productCondition": "Новый",
+      "price": 1000,
+      "comment": "Игровой ноутбук",
+      "date": "2022-09-07T21:00:00.000Z",
+      "id": 2
     },
     {
-      "name": "Монитор Sumsung",
-      "category": "monitor",
-      "productCondition": "new",
-      "price": 765,
-      "comment": "Монитор с разрешением 1920*1080",
-      "date": "2022-09-21T21:00:00.000Z",
-      "id": "c2JNfHJ"
+      "name": "Apple Tab1",
+      "category": "Планшеты",
+      "productCondition": "Новый",
+      "price": 888,
+      "comment": "Планшет для рисования",
+      "date": "2022-09-07T21:00:00.000Z",
+      "id": 3
     },
     {
-      "name": "Samsung Galaxy Tab2",
-      "category": "tablet",
-      "productCondition": "new",
-      "price": 299,
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi corporis deserunt ea earum illo molestiae omnis pariatur reprehenderit voluptatum.",
-      "date": "2022-09-05T21:00:00.000Z",
-      "id": "WSmnopk"
+      "name": "Epson TR234",
+      "category": "Оргтехника",
+      "productCondition": "Б/у",
+      "price": 654,
+      "comment": "Офисный принтер",
+      "date": "2022-09-07T21:00:00.000Z",
+      "id": 4
+    },
+    {
+      "name": "Samsung GalaxyTab2",
+      "category": "Планшеты",
+      "productCondition": "Новый",
+      "price": 777,
+      "comment": "Планшет для рисования",
+      "date": "2022-09-02T21:00:00.000Z",
+      "id": 5
+    },
+    {
+      "name": "Trex 29TY",
+      "category": "Серверы",
+      "productCondition": "После ремонта",
+      "price": 9999,
+      "comment": "СШАррвав ыравращр ЩФЫаора оршрлывра иоалиоврал",
+      "date": "2022-09-22T21:00:00.000Z",
+      "id": 6
+    },
+    {
+      "name": "Trex 29TY",
+      "category": "Серверы",
+      "productCondition": "После ремонта",
+      "price": 9999,
+      "comment": "СШАррвав ыравращр ЩФЫаора оршрлывра иоалиоврал",
+      "date": "2022-09-22T21:00:00.000Z",
+      "id": 7
+    },
+    {
+      "name": "Trkjshk",
+      "category": "Компьютеры",
+      "productCondition": "Новый",
+      "price": 9999,
+      "comment": "s;fkjsaFJHASHFOAHSFOAHF",
+      "date": "2022-09-02T21:00:00.000Z",
+      "id": 8
+    },
+    {
+      "name": "sdkald",
+      "category": "Компьютеры",
+      "productCondition": "Новый",
+      "price": 988878,
+      "comment": "slkdflasfhah",
+      "date": "2022-09-01T21:00:00.000Z",
+      "id": 9
+    },
+    {
+      "name": "sasakdn",
+      "category": "Компьютеры",
+      "productCondition": "Новый",
+      "price": 888,
+      "comment": "DKJSFHDOASHFC",
+      "date": "2022-09-04T21:00:00.000Z",
+      "id": 10
     }
   ],
   "comments": [
