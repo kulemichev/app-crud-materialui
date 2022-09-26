@@ -1,10 +1,10 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {HttpService} from "../../services/http.service";
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {ProductInterface} from "../../shared/types/product.interface";
-import {PRODUCT_CONDITION_LIST, PRODUCT_FIELDS} from "../../mock/products.mock";
-import {UtilsService} from "../../shared/services/utils.service";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {HttpService} from '../../services/http.service';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {ProductInterface} from '../../shared/types/product.interface';
+import {PRODUCT_CONDITION_LIST, PRODUCT_FIELDS} from '../../mock/products.mock';
+import {UtilsService} from '../../shared/services/utils.service';
 
 @Component({
   selector: 'app-dialog',
@@ -15,7 +15,7 @@ export class DialogComponent implements OnInit {
 
   form!: FormGroup;
   productConditionList = PRODUCT_CONDITION_LIST;
-  actionBtn = 'Сохранить'
+  actionBtn = 'Сохранить';
 
   constructor(
     private fb: FormBuilder,
@@ -34,7 +34,7 @@ export class DialogComponent implements OnInit {
   addProduct(): void {
     if (this.form.valid) {
       this.httpService.createData(this.form.value).subscribe({
-        next: (res) => {
+        next: (res: ProductInterface) => {
           console.log('product added:', res);
           this.form.reset();
           this.dialogRef.close('created');
@@ -44,11 +44,10 @@ export class DialogComponent implements OnInit {
     }
   }
 
-
   updateProduct(): void {
     if (this.form.valid && this.data.id) {
       this.httpService.updateData(this.form.value, this.data.id).subscribe({
-        next: (res) => {
+        next: (res: ProductInterface) => {
           console.log('product updated:', res);
           this.form.reset();
           this.dialogRef.close('updated');
@@ -72,9 +71,8 @@ export class DialogComponent implements OnInit {
   private initializeFormValues(): void {
     if (this.data) {
       this.actionBtn = 'Изменить';
-
-      PRODUCT_FIELDS.forEach(name => this.form.controls['name'].setValue(this.data[name as keyof ProductInterface]));
-
+      PRODUCT_FIELDS.forEach(name => this.form.controls[name].setValue(this.data[name as keyof ProductInterface]));
     }
   }
+
 }

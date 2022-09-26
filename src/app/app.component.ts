@@ -1,13 +1,13 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
-import {DialogComponent} from "./components/dialog/dialog.component";
-import {HttpService} from "./services/http.service";
-import {MatTableDataSource} from "@angular/material/table";
-import {MatPaginator} from "@angular/material/paginator";
-import {MatSort} from "@angular/material/sort";
-import {ProductInterface} from "./shared/types/product.interface";
-import {PRODUCT_COLUMNS} from "./mock/products.mock";
-import {UtilsService} from "./shared/services/utils.service";
+import {MatDialog} from '@angular/material/dialog';
+import {DialogComponent} from './components/dialog/dialog.component';
+import {HttpService} from './services/http.service';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {ProductInterface} from './shared/types/product.interface';
+import {PRODUCT_COLUMNS} from './mock/products.mock';
+import {UtilsService} from './shared/services/utils.service';
 
 @Component({
   selector: 'app-root',
@@ -15,15 +15,17 @@ import {UtilsService} from "./shared/services/utils.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
   displayedColumns: string[] = PRODUCT_COLUMNS;
   dataSource!: MatTableDataSource<ProductInterface>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(public dialog: MatDialog,
-              private httpService: HttpService,
-              private utils: UtilsService
+  constructor(
+    public dialog: MatDialog,
+    private httpService: HttpService,
+    private utils: UtilsService
   ) {
   }
 
@@ -42,7 +44,7 @@ export class AppComponent implements OnInit {
 
   createProduct(): void {
     this.dialog.open(DialogComponent, {
-      width: '30%'
+      width: '40%'
     }).afterClosed().subscribe({
       next: (res: string) => {
         if (res === 'created') {
@@ -67,7 +69,6 @@ export class AppComponent implements OnInit {
     });
   }
 
-
   deleteProduct(id: number): void {
     this.httpService.deleteData(id).subscribe({
       next: () => {
@@ -88,5 +89,4 @@ export class AppComponent implements OnInit {
       error: this.utils.errorHandler
     });
   }
-
 }

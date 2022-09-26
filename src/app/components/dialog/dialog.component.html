@@ -22,11 +22,10 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Выберете дату</mat-label>
+      <mat-label>Выберите дату</mat-label>
       <input [matDatepicker]="datepicker" formControlName="date" matInput>
       <mat-datepicker-toggle [for]="datepicker" matSuffix></mat-datepicker-toggle>
-      <mat-datepicker #datepicker>
-      </mat-datepicker>
+      <mat-datepicker #datepicker></mat-datepicker>
     </mat-form-field>
 
     <label id="example-radio-group-label">
@@ -55,6 +54,7 @@
                 matInput
                 placeholder="Описание товара..."></textarea>
     </mat-form-field>
+
   </form>
 </div>
 
@@ -64,4 +64,3 @@
           mat-raised-button>{{actionBtn}}
   </button>
 </div>
-

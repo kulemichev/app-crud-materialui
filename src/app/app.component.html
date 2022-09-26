@@ -1,7 +1,7 @@
-<div class="mat-toolbar">
+<div class="toolbar">
   <div class="container">
     <mat-toolbar>
-      <button mat-icon-button>
+      <button class="example-icon" mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
       <span>Angular CRUD with Material UI</span>
@@ -23,7 +23,7 @@
 
       <ng-container matColumnDef="name">
         <th *matHeaderCellDef mat-header-cell mat-sort-header> Название</th>
-        <td *matCellDef="let row" mat-cell>{{row.name}} </td>
+        <td *matCellDef="let row" mat-cell>{{row.name}}</td>
       </ng-container>
 
       <ng-container matColumnDef="category">
@@ -33,7 +33,7 @@
 
       <ng-container matColumnDef="date">
         <th *matHeaderCellDef mat-header-cell mat-sort-header> Дата</th>
-        <td *matCellDef="let row" mat-cell>{{row.date | date:"dd.MM.yyyy"}}</td>
+        <td *matCellDef="let row" mat-cell>{{row.date | date: "yyyy.MM.dd"}}</td>
       </ng-container>
 
       <ng-container matColumnDef="productCondition">
@@ -48,7 +48,7 @@
 
       <ng-container matColumnDef="comment">
         <th *matHeaderCellDef class="comment" mat-header-cell mat-sort-header> Информация</th>
-        <td *matCellDef="let row" class="comment" mat-cell>{{row.comment | length: 50}}</td>
+        <td *matCellDef="let row" class="comment" mat-cell>{{row.comment | length: 60}}</td>
       </ng-container>
 
       <ng-container matColumnDef="actions">
@@ -66,14 +66,14 @@
       <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
       <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
 
+      <!-- Row shown when there is no matching data. -->
       <tr *matNoDataRow class="mat-row">
         <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
       </tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"
-                   pageSize="10"></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="10"
+                   aria-label="Select page of users"></mat-paginator>
   </div>
 
 </div>
-

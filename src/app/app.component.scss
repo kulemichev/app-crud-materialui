@@ -6,6 +6,8 @@
 .mat-toolbar {
   background: #3f51b5;
   color: #fff;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 table {
@@ -18,7 +20,7 @@ table {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
